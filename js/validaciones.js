@@ -63,7 +63,7 @@ function validarurl(miurl) {
         console.log("entro en el if")
         return false
     } else {
-        return true 
+        return true
     }
 }
 console.log(validarurl(" https://www.lawebdelprogramador.com/codigo/JavaScript/2360-funcion-para-validar-si-una-url-es-correcta.html"))
@@ -75,15 +75,24 @@ console.log(validarurl(" ww.lawebdelprogramador.com/codigo/JavaScript/2360-funci
 
 
 //  Validar fecha
-function mirarFecha() {
-    document.querySelector("[myAttribute=value]").value;
-}   
-
-
-
-
+function validarFecha(fecha1) {
+    const fecha = fecha1.trim();
+    const pattern = /^\d{4}([\-/. ])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/
+    if (typeof fecha !== 'string' || fecha === "" || !pattern.test(fecha)) {
+        console.log("entro en el if")
+        return false
+    } else {
+        return true
+    }
+}
+console.log(validarFecha(" 2023/04/23 "))
+console.log(validarFecha("  "))
+console.log(validarFecha(" 09-04-2023 "))
 
 //  Validar una hora/tiempo
+
+
+
 //  Validar fecha y hora de nacimiento
 //  Validar mes
 //  Validar semana
